@@ -1,0 +1,178 @@
+{% extends '../template.html' %}
+{% load static %}
+
+{% block title%}
+    Express
+{% endblock%}
+
+{% block mainContent %}
+    <main>
+        <section id="express-section-1" class="section-padding firstsectionpadding darkblue">
+            <div id="share-bar"></div>
+            <div class="express-banner navyblue  margin-bottom50">
+                <div class="container">
+                    <div class="express-heading-1" data-aos="zoom-in-down" data-aos-duration="1000"
+                        data-aos-delay="2000">
+                        <h2>cryptobit express: buy/sell your crypto locally</h2>
+                    </div>
+                    <div class="express-heading-2" data-aos="zoom-out-down" data-aos-duration="1000"
+                        data-aos-delay="2100">
+                        <h4>Trade with Zero Fee</h4>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class=" darkblue section-padding">
+                <div class="container">
+                    <div class=" d-flex space-around  ">
+                        <div class="acc-info relative">
+                            <div  class="" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000"   >
+                                <p>Welcome, * <span id="welcome-user" class="white-text"></span> *</p>
+                                <p>Balance : $ <span id="balance" class="white-text"></span></p>
+                                <p>Ethium : <span id="ecoins" class="white-text"></span> coins</p>
+                                <p>BTC : <span id="bcoins" class="white-text"></span> coins</p>
+                                <p>Ethium Rate: $ <span id="erate" class="white-text"></span></p>
+                                <p>BTC Rate: $ <span id="brate" class="white-text"></span></p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="">
+                            <div id="tabs" class="blue-box tab-box " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="">
+                                <ul class="tab-list d-flex center items-start">
+                                    <li><a href="#tabs-1" class="active">ETH</a></li>
+                                    <li><a href="#tabs-2" >BTC</a></li>
+                                </ul>
+                                <div id="tabs-1">
+                                
+                                    <form id="ebuy" class="d-flex center flex-column items-start">
+                                        <label>I want to buy</label>
+                                        <input type="number" placeholder="How many coins would you like?" name="pay" id="eb">
+    
+                                        
+                                        <p>You will use $ <span id="edol"> </span> of your balance.</p>
+    
+                                        <input type="submit" value="Buy with 0 Fee" class="button hundred" name="ebuy">
+                                    </form>
+    
+                                
+                                    <form id="esell" class="d-flex center flex-column items-start">
+                                        <label>I want to sell</label>
+                                        <input type="number" placeholder="How many coins are you selling?" name="pay" id="es">
+    
+                                    
+                                        <p>You will get $ <span id="esdol"> </span> in your balance.</p>
+                                        <input type="submit" value="Sell with 0 Fee" class="button hundred" name="esell">
+                                    </form>
+    
+                                </div>
+    
+                                <div id="tabs-2">
+                                
+                                
+                                    <form id="bbuy" class="d-flex center flex-column items-start">
+                                        <label>I want to buy</label>
+                                        <input type="number" placeholder="How many coins would you like?" name="pay" id="bb">
+                            
+                                        
+                                            <p>You will use $ <span id = "bdol"> </span> of your balance.</p>
+                                
+                                        <input type="submit" value="Buy with 0 Fee" class="button hundred" name="ebuy">
+                                    </form>
+                                    <form id="bsell" class="d-flex center flex-column items-start">
+                                        <label>I want to sell</label>
+                                        <input type="number" placeholder="How many coins are you selling?" name="pay" id="bs">
+    
+                                
+                                        <p>You will get $ <span id="bsdol"> </span> in your balance.</p>
+                                        <input type="submit" value="Sell with 0 Fee" class="button hundred" name="esell">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+        <!--FAQ SECTION-->
+        <section id="faq-section" class="navyblue section-padding">
+            <div class="container">
+                <div class="faq-title">
+                    <h3>These are the questions our customers ask most frequently!</h3>
+                </div>
+                <div id="accordion" class="accordion">
+                    <h3 class="darkblue"><a href="#"> <span><i class="fal fa-angle-down"></i></span> What is actually
+                            cryptocurrency?</a></h3>
+                    <div class="faq-paragraph">
+                        <p>
+                            Cryptocurrencies should not be seen as a currency. The name cryptocurrency is a misnomer.
+                            They do not serve as an alternative to the Rupee or other fiat currency. They really are an
+                            asset/software that is used to write on the blockchain and for incentivising the nodes – if
+                            at all they serve as an instrument for payments, this use case is limited to within the
+                            blockchain
+                            ecosystem to incentivise the nodes.
+                        </p>
+                    </div>
+                    <h3 class="light-background"><a href="#"> <span><i class="fal fa-angle-down"></i></span>Who are the
+                            users?</a></h3>
+                    <div class="faq-paragraph">
+                        <p>
+                            The users are individuals or companies that submit transactions into the blockchain network
+                            to be validated
+                            and processed. The banking equivalent would be you logging in to your banking account and
+                            submitting a
+                            transaction to send money to another account.
+                        </p>
+                    </div>
+                    <h3 class="darkblue"><a href="#"> <span><i class="fal fa-angle-down"></i></span>Will cryptocurrency
+                            be widely accepted?</a></h3>
+                    <div class="faq-paragraph">
+                        <p>
+                            Cryptocurrency has bloomed since 2009. Some commercial banks, including some investment
+                            banks, introduce
+                            their own cryptocurrencies for the purposes of settlements and transactions with certain
+                            financial institutions and corporations. At the moment, Central banking is not interested
+                            in cryptocurrencies, but this may change in the future.
+                        </p>
+                    </div>
+                    <h3 class="light-background"><a href="#"> <span><i class="fal fa-angle-down"></i></span>What are the
+                            government's concerns around use of cryptocurrency?</a></h3>
+                    <div class="faq-paragraph">
+                        <p>
+                            The government is concerned about: </p>
+                            <ul>
+                                <li>The use of cryptocurrencies for illicit activities.</li>
+                                <li>Tax evasion.</li>
+                                <li>Money laundering.</li>
+                                <li>Loss of control over monetary policy and flight of capital overseas.</li>
+                            </ul>
+                        
+                    </div>
+                    <h3 class="darkblue"><a href="#"> <span><i class="fal fa-angle-down"></i></span>Are the government's
+                            concerns valid?</a></h3>
+                    <div class="faq-paragraph">
+                        <p>
+                            Yes. However, all new technologies pose risks. There were concerns around the
+                            use of the printing press (jobs), automobiles and aeroplanes (safety), internet
+                            (surveillance-free communication) as well, as with many new technologies such as
+                            artificial intelligence, drones and robotics. A ban is usually not a good answer
+                            to regulating new technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock mainContent %}
+
+
+
+
+
+    

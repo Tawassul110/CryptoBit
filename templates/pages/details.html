@@ -1,0 +1,51 @@
+{% extends '../template.html' %}
+{% load static %}
+
+    {% block title%}
+            Details
+        {% endblock%}
+
+{% block mainContent %}
+    <main>
+        <section id="details-section-1" class="darkblue">
+            <div class="container">
+                <div class="coin-specify-box">
+        <div class="coin-name-box">
+            <img src="{% static 'images/bitcoin.png' %}" alt="Bitcoin" class="hundred">
+            <h2>Bitcoin</h2>
+        </div>
+        <div class="coin-price-box">
+            <h5>Bitcoin Price</h5>
+            <h3>0.9999</h3>
+        </div>
+    </div>
+    <div id="details-section-2" class="coin-explanation">
+        <h2>What is Bitcoin?</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+
+    <div class="coin-working">
+        <h2>How does Bitcoin work?</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+
+    <div class="coin-advantages">
+        <h2>Advantages of Bitcoin</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+
+    <div class="coin-disadvantages">
+        <h2>Disadvantages of Bitcoin</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+
+    <div class="button">
+        <a href="{% url 'details' %}"> BUY COINS</a>
+    </div>
+            </div>
+        </section>    
+    </main>
+
+
+
+{% endblock mainContent %}        
