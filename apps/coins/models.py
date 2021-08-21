@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Coin(models.Model):
     name = models.CharField(max_length=90)
-    logo_image = models.ImageField(upload_to="uploads/coins")
+    logo_image = models.ImageField(upload_to="media/coins")
     price = models.FloatField()
     details = models.TextField()
     working = models.TextField(max_length=300, null=True)

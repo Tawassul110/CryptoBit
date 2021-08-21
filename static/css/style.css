@@ -191,6 +191,9 @@ ul li{
 .items-start{
     align-items: flex-start;
 }
+.wrap{
+    flex-wrap: wrap;
+}
 /**
 *
 * POSITION PROPERTIES

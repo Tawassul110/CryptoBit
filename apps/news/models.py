@@ -5,7 +5,7 @@ class News(models.Model):
     title = models.CharField(max_length=90)
     content = models.TextField()
     publish_date = models.DateField()
-    featured_image = models.ImageField (upload_to="uploads/news", height_field=None, width_field=None, max_length=None)
+    featured_image = models.ImageField (upload_to="media/news", height_field=None, width_field=None, max_length=None)
 
     class Meta:
         verbose_name = ("News")

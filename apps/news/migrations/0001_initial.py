@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=90)),
                 ('content', models.TextField()),
                 ('publish_date', models.DateField()),
-                ('featured_image', models.ImageField(upload_to='uploads/news')),
+                ('featured_image', models.ImageField(upload_to='media/news')),
             ],
             options={
                 'verbose_name': 'News',
