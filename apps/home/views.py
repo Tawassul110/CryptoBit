@@ -60,6 +60,17 @@ def register(request):
 def login(request):
     return render(request, 'pages/login.html')
 
+def coinDisplay(request):
+    context = {
+        'coins' : get_coins(),
+    }
+
+    return render(request, 'pages/coinDisplay.html', context)
+
+
 
 def details(request):
-    return render(request, 'pages/details.html')    
+    context = {
+        'coins' : get_coins(),
+    }
+    return render(request, 'pages/details.html', context)    

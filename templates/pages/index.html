@@ -65,13 +65,16 @@
                                 {{ coin.name }} 
                             </h3>
                         </div>
-                        <div class="button-btc d-flex center button">
+                        <div class="button-btc d-flex center ">
                                 <a href="{% url 'details' %}"> MORE DETAILS</a>
                         </div>
                     
                         </div>
+                        
                     {% endfor %}
-                    
+                    <div class="d-flex center">
+                            <a href="{% url 'coinDisplay' %}" class="button">ALL COINS</a>
+                        </div>
                 </div>
 
                       
