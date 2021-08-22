@@ -6,9 +6,9 @@ class Coin(models.Model):
     logo_image = models.ImageField(upload_to="media/coins")
     price = models.FloatField()
     details = models.TextField()
-    working = models.TextField(max_length=300, null=True)
-    advantages = models.TextField(max_length=300, null=True)
-    disadvantages = models.TextField(max_length=300, null=True)
+    working = models.TextField(null=True)
+    advantages = models.TextField(null=True)
+    disadvantages = models.TextField(null=True)
 
     def __str__(self):
         return self.name 

@@ -5,7 +5,7 @@
 {% block mainContent %}
 
 <main>
-    <section id="details-section-1" class="darkblue section-padding">
+    <section id="details-section-1" class="darkblue section-padding firstsectionpadding">
         <div class="container">
             {% for coin in coins %}
             <div class="coin-specify-box d-flex space-between">
@@ -14,7 +14,7 @@
                     <h2 class="white-text">{{ coin.name }}</h2>
                 </div>
                 <div class="coin-price-box d-flex items-centre center">
-                    <h5 class="blue-text">Bitcoin Price</h5>
+                    <h5 class="blue-text">{{ coin.name }} Price</h5>
                     <h3 class="green-text items-centre">{{ coin.price }}</h3>
                 </div>
             </div>
