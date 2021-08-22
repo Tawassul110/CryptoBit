@@ -231,6 +231,7 @@ ul li{
 
 
 /* BUTTON */
+
 .button{
     background: linear-gradient(to left, rgba(57,100,208,1) 0%, rgba(45,193,201,1) 100%);
     border-radius: 50px;
@@ -242,6 +243,9 @@ ul li{
     cursor: var(--cursor-pointer);
     text-align: var(--text-center);
     text-decoration: none;
+}
+.details-button{
+    padding: 0 10px;
 }
 
 .button a{
@@ -594,7 +598,7 @@ section#home-section-1 h2{
     width: 240px;
     height: 225px;
     padding:40px;
-    margin: 10px;
+    margin: 25px;
     border-radius: 22px;
 }
 
