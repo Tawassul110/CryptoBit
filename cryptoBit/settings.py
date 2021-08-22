@@ -124,6 +124,8 @@ USE_TZ = True
 
 STATIC = ''
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = (os.path.join('static'),)
 
 
@@ -131,3 +133,11 @@ STATICFILES_DIRS = (os.path.join('static'),)
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'ff2a6c773449db'
+EMAIL_HOST_PASSWORD = 'd038ad861c3057'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
