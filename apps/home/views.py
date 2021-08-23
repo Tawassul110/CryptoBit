@@ -1,15 +1,18 @@
 from apps.news.views import get_news
 from django.shortcuts import render
 from apps.coins.views import get_coins
+from apps.coins.views import get_featured_coins
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.utils.html import strip_tags
+
 
 # Create your views here.
 def home(request):
     context = {
         'coins' : get_coins(),
-        'news'  : get_news()
+        'news'  : get_news(),
+        'featured_coins' : get_featured_coins()
     }
     return render(request, 'pages/index.html', context)
 
