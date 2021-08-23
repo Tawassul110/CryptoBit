@@ -116,6 +116,9 @@ html, body {
 .fontsize10{
     font-size: 10px;
 }
+.fontsize15{
+    font-size: 15px;
+}
 
 .fontweight400{
     font-weight: var(--font400);
@@ -597,7 +600,7 @@ section#home-section-1 h2{
     width: 240px;
     height: 225px;
     padding:40px;
-    margin: 10px 10px 30px 10px;
+    margin: 50px 50px;
     border-radius: 22px;
 }
 

@@ -45,7 +45,10 @@ def trade(request):
 
 
 def market(request):
-    return render(request, 'pages/market.html')
+    context = {
+        'coins' : get_coins(),
+    }
+    return render(request, 'pages/market.html', context)
 
 
 def visacard(request):
@@ -63,6 +66,7 @@ def register(request):
 def login(request):
     return render(request, 'pages/login.html')
 
+
 def coinDisplay(request):
     context = {
         'coins' : get_coins(),
@@ -76,4 +80,6 @@ def details(request):
     context = {
         'coins' : get_coins(),
     }
-    return render(request, 'pages/details.html', context)    
+    return render(request, 'pages/details.html', context)
+
+  

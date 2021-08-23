@@ -7,7 +7,6 @@
 <main>
     <section id="details-section-1" class="darkblue section-padding firstsectionpadding">
         <div class="container">
-            {% for coin in coins %}
             <div class="coin-specify-box d-flex space-between">
                 <div class="d-flex items-centre">
                     <a href="index.html"><img src="{{ coin.logo_image.url }}"> </a>
@@ -15,7 +14,7 @@
                 </div>
                 <div class="coin-price-box d-flex items-centre center">
                     <h5 class="blue-text">{{ coin.name }} Price</h5>
-                    <h3 class="green-text items-centre">{{ coin.price }}</h3>
+                    <h3 class="green-text items-centre">&#36; {{ coin.price }}</h3>
                 </div>
             </div>
             <div id="details-section-2" class="coin-text">
@@ -44,7 +43,6 @@
                     <a href="{% url 'trade' %}" class="button">BUY COINS</a>
                 </div>
             </div>
-            {% endfor %}
         </section>
     </main>
 

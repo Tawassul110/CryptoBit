@@ -9,6 +9,8 @@ class Coin(models.Model):
     working = models.TextField(null=True)
     advantages = models.TextField(null=True)
     disadvantages = models.TextField(null=True)
+    coin_short_name = models.CharField(null=True, max_length=300)
+    sparkline = models.ImageField(upload_to="media/coins" , null=True)
 
     def __str__(self):
         return self.name 
