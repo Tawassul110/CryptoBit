@@ -1,35 +1,36 @@
 {% extends '../template.html' %}
 {% load static %}
-    {% block mainContent %}
+{% block mainContent %}
 
-    <main>
+<main>
 
-<section id="home-section-2" class="section-padding hundred darkblue firstsectionpadding">
-            <div class="container">
-                <div class="d-flex center items-centre wrap">
-                    {% for coin in coins %}
-                        <div class="bitcoin-rate details relative blue-box" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
-                        <div class="d-flex space-around items-centre heading">
-                            <img src="{{ coin.logo_image.url }}" alt="{{ coin.name }}">
-                            <h3 class="white-text">
-                                {{ coin.name }} 
-                            </h3>
-                        </div>
-                        <div class="button-btc d-flex center button details-button">
-                                <a href="{% url 'details' %}"> MORE DETAILS</a>
-                        </div>
-                        
-                        </div>
-                    {% endfor %}
-                    
-                </div>
-
-                      
-                    
+    <section id="home-section-2" class="section-padding hundred darkblue firstsectionpadding">
+        <div class="container">
+            <div class="d-flex center items-centre wrap">
+                {% for coin in coins %}
+                <div class="bitcoin-rate details relative blue-box" data-aos="fade-up" data-aos-easing="linear"
+                    data-aos-duration="1000">
+                    <div class="d-flex space-around items-centre heading">
+                        <img src="{{ coin.logo_image.url }}" alt="{{ coin.name }}">
+                        <h3 class="white-text">
+                            {{ coin.name }}
+                        </h3>
                     </div>
-                </div>
-            </div>
-        </section>
-        </main>
+                    <div class="button-btc d-flex center button details-button">
+                        <a href="{% url 'details' %}"> MORE DETAILS</a>
+                    </div>
 
-    {% endblock mainContent %}
+                </div>
+                {% endfor %}
+
+            </div>
+
+
+
+        </div>
+        </div>
+        </div>
+    </section>
+</main>
+
+{% endblock mainContent %}
