@@ -116,6 +116,9 @@ html, body {
 .fontsize10{
     font-size: 10px;
 }
+.fontsize15{
+    font-size: 15px;
+}
 
 .fontweight400{
     font-weight: var(--font400);
