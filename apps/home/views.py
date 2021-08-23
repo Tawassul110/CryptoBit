@@ -1,4 +1,6 @@
+from apps.visacard.views import get_visacard
 from apps.news.views import get_news
+from apps.visacard.views import get_visacard
 from django.shortcuts import render
 from apps.coins.views import get_coins
 from apps.coins.views import get_featured_coins
@@ -52,7 +54,10 @@ def market(request):
 
 
 def visacard(request):
-    return render(request, 'pages/visacard.html')
+    context = {
+        'visacard' : get_visacard()
+    }
+    return render(request, 'pages/visacard.html', context)
 
 
 def forgotpassword(request):
