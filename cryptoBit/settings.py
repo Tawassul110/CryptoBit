@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.home.apps.HomeConfig' ,
     'apps.news.apps.NewsConfig' ,
-    'apps.coins.apps.CoinsConfig'
+    'apps.coins.apps.CoinsConfig',
+    'apps.visacard.apps.VisacardConfig'
 ]
 
 MIDDLEWARE = [
