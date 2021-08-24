@@ -1,13 +1,15 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "icon" href = "{% static 'images/logo.png' %}" type = "image/x-icon">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">     -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,54 +19,56 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <script src="{% static 'javascript/jquery-social-share-bar.js' %}"></script>
     <script src="{% static 'javascript/bg-animation.js' %}"></script>
     <script src="{% static 'javascript/slick.min.js' %}"></script>
     <script src="{% static 'javascript/script.js' %}"></script>
 </head>
+
 <body>
     <!--<div class="loader d-flex center items-centre fixed ">
         <img src="{% static 'images/loader.gif' %}" alt="Loader" class="loader-img">
     </div>-->
 
-     <!--Header-->
+    <!--Header-->
     <header class="fixed hundred darkblue">
         <div class="container">
             <div class="d-flex space-between items-centre">
-                <div class=" d-flex items-centre">
+                <div class="d-flex items-centre">
                     <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="logo" class="logo"></a>
                     <h1 class="white-text">CryptoBit</h1>
                 </div>
 
-                
+
 
                 <div>
                     <nav class="main-navigation">
                         <ul class="d-flex space-around ">
                             <li><a href="{% url 'home' %}">Home</a> </li>
-                            <li class=""><a href=" {% url 'trade' %} ">Trade</a> </li>
+                            <li class=""><a href=" {% url 'coinDisplay' %} ">Coins</a> </li>
                             <li><a href="{% url 'market' %}"> Market</a></li>
-                            
+
                             <li><a href="{% url 'visacard' %}">Visa Card</a></li>
-                            <li class="nav-login-button "><a href="{% url 'login' %}" id="signinbut"> SIGN IN</a></li> 
+                            <li class="nav-login-button "><a href="{% url 'login' %}" id="signinbut"> SIGN IN</a></li>
                         </ul>
                     </nav>
-                    
+
                 </div>
-                
+
 
 
             </div>
         </div>
     </header>
 
-    
+
     <main>
         {% block mainContent %}{% endblock mainContent %}
     </main>
@@ -76,14 +80,15 @@
         <div class="container">
             <div class="d-flex space-between items-centre">
                 <div class="footer-items">
-                    <p>Copyright <i class="fal fa-copyright"></i> 2021 <a href="{% url 'home' %}">www.cryptobit.com</a>. All rights reserved.</p>
+                    <p>Copyright <i class="fal fa-copyright"></i> 2021 <a href="{% url 'home' %}">www.cryptobit.com</a>.
+                        All rights reserved.</p>
                 </div>
 
                 <nav class="footer-navigation">
                     <div class="footer-items">
                         <ul>
                             <li><a href="#">Terms and Conditions</a></li>
-                            <li><a href="#"> Return Policy  </a></li>
+                            <li><a href="#"> Return Policy </a></li>
                             <li><a href="#"> Careers</a></li>
                         </ul>
                     </div>
@@ -92,4 +97,5 @@
         </div>
     </footer>
 </body>
+
 </html>

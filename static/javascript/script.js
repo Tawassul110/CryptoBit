@@ -15,9 +15,9 @@ $(document).ready(function () {
         $('#signinbut').html('SIGN IN');
     }
 
-    else if (pagename == 'express' | pagename == 'market' | pagename == 'visacard' && (JSON.parse(localStorage.getItem('logsucc')) == 'false' | !JSON.parse(localStorage.getItem('logsucc')))) {
-        window.location.href = 'login.html'
-    }
+    // else if (pagename == 'express' | pagename == 'market' | pagename == 'visacard' && (JSON.parse(localStorage.getItem('logsucc')) == 'false' | !JSON.parse(localStorage.getItem('logsucc')))) {
+    //     window.location.href = 'login.html'
+    // }
 
     else if (pagename == 'index') {
         if (JSON.parse(localStorage.getItem('logsucc')) == 'false' | !JSON.parse(localStorage.getItem('logsucc'))) {
@@ -165,7 +165,7 @@ $(document).ready(function () {
     }, 2000);
 
     // Tabs
-    $("#tabs").tabs();
+    // $("#tabs").tabs();
 
     $('#tabs a').on('click', function(){
         $('#tabs .active').removeClass('active');
@@ -331,193 +331,193 @@ $(document).ready(function () {
 
     // SCRIPT BUY-SELL
 
-    if (pagename == 'express' && (JSON.parse(localStorage.getItem('logsucc')) == 'true')) {
+    // if (pagename == 'express' && (JSON.parse(localStorage.getItem('logsucc')) == 'true')) {
 
-        let loguser = JSON.parse(localStorage.getItem('loguser'));
-        // window.alert('Logged In')
-        console.log(loguser)
-        function loguser2reguser(myuser) {
-            let registered_users = JSON.parse(localStorage.getItem('users'));
+    //     let loguser = JSON.parse(localStorage.getItem('loguser'));
+    //     // window.alert('Logged In')
+    //     console.log(loguser)
+    //     function loguser2reguser(myuser) {
+    //         let registered_users = JSON.parse(localStorage.getItem('users'));
 
-            for (let index = 0; index < registered_users.length; index++) {
-                if (registered_users[index]['email'] == myuser['email']) {
-                    registered_users[index] = myuser;
-                }
-                localStorage.setItem('users', JSON.stringify(registered_users));
-            }
-        }
-        // let user = loguser['email'];
-        // let balance = loguser['dollarbalance'];
-        // let ecoins = loguser['ethbal'];
-        // let bcoins = loguser['btcbal'];
-        let ethrate = 25;
-        let btcrate = 50;
-        // let cansell = false;
-        $('#balance').html(loguser['dollarbalance'])
-        $('#ecoins').html(loguser['ethbal'])
-        $('#bcoins').html(loguser['btcbal'])
-        $('#erate').html(ethrate)
-        $('#brate').html(btcrate)
-        $('#welcome-user').html(loguser['email'])
+    //         for (let index = 0; index < registered_users.length; index++) {
+    //             if (registered_users[index]['email'] == myuser['email']) {
+    //                 registered_users[index] = myuser;
+    //             }
+    //             localStorage.setItem('users', JSON.stringify(registered_users));
+    //         }
+    //     }
+    //     // let user = loguser['email'];
+    //     // let balance = loguser['dollarbalance'];
+    //     // let ecoins = loguser['ethbal'];
+    //     // let bcoins = loguser['btcbal'];
+    //     let ethrate = 25;
+    //     let btcrate = 50;
+    //     // let cansell = false;
+    //     $('#balance').html(loguser['dollarbalance'])
+    //     $('#ecoins').html(loguser['ethbal'])
+    //     $('#bcoins').html(loguser['btcbal'])
+    //     $('#erate').html(ethrate)
+    //     $('#brate').html(btcrate)
+    //     $('#welcome-user').html(loguser['email'])
 
-        $("#eb").keyup(function (event) {
-            let val = parseInt($('#eb').val())
-            let total = val * ethrate
-            $('#edol').html(total)
+    //     $("#eb").keyup(function (event) {
+    //         let val = parseInt($('#eb').val())
+    //         let total = val * ethrate
+    //         $('#edol').html(total)
 
-        });
+    //     });
 
-        $("#es").keyup(function (event) {
-            let val = parseInt($('#es').val())
-            let total = val * ethrate
-            $('#esdol').html(total)
-        });
+    //     $("#es").keyup(function (event) {
+    //         let val = parseInt($('#es').val())
+    //         let total = val * ethrate
+    //         $('#esdol').html(total)
+    //     });
 
-        $("#bb").keyup(function (event) {
-            let val = parseInt($('#bb').val())
-            let total = val * btcrate
-            $('#bdol').html(total)
+    //     $("#bb").keyup(function (event) {
+    //         let val = parseInt($('#bb').val())
+    //         let total = val * btcrate
+    //         $('#bdol').html(total)
 
-        });
+    //     });
 
-        $("#bs").keyup(function (event) {
-            let val = parseInt($('#bs').val())
-            let total = val * btcrate
-            $('#bsdol').html(total)
-        });
+    //     $("#bs").keyup(function (event) {
+    //         let val = parseInt($('#bs').val())
+    //         let total = val * btcrate
+    //         $('#bsdol').html(total)
+    //     });
 
-        $('#ebuy').submit(function (e) {
-            e.preventDefault();
-            let val = parseInt($('#eb').val())
-            let total = val * ethrate
+    //     $('#ebuy').submit(function (e) {
+    //         e.preventDefault();
+    //         let val = parseInt($('#eb').val())
+    //         let total = val * ethrate
 
-            if (total <= loguser['dollarbalance']) {
+    //         if (total <= loguser['dollarbalance']) {
 
-                loguser['ethbal'] += val;
-                $('#ecoins').html(loguser['ethbal'])
+    //             loguser['ethbal'] += val;
+    //             $('#ecoins').html(loguser['ethbal'])
 
-                loguser['dollarbalance'] = loguser['dollarbalance'] - total;
-                $('#balance').html(loguser['dollarbalance'])
+    //             loguser['dollarbalance'] = loguser['dollarbalance'] - total;
+    //             $('#balance').html(loguser['dollarbalance'])
 
-                // cansell = true;
-                window.alert('Transaction Successful')
-            }
-            else {
-                window.alert('You cannot buy over limit');
-            }
+    //             // cansell = true;
+    //             window.alert('Transaction Successful')
+    //         }
+    //         else {
+    //             window.alert('You cannot buy over limit');
+    //         }
             
-            localStorage.setItem('loguser', JSON.stringify(loguser));
-            loguser2reguser(loguser)
-            $('#edol').html('')
-            this.reset();
-        })
+    //         localStorage.setItem('loguser', JSON.stringify(loguser));
+    //         loguser2reguser(loguser)
+    //         $('#edol').html('')
+    //         this.reset();
+    //     })
 
-        $('#esell').submit(function (e) {
-            e.preventDefault();
-            let val = parseInt($('#es').val())
-            let total = val * ethrate
+    //     $('#esell').submit(function (e) {
+    //         e.preventDefault();
+    //         let val = parseInt($('#es').val())
+    //         let total = val * ethrate
 
 
 
-            if (val <= loguser['ethbal']) {
+    //         if (val <= loguser['ethbal']) {
 
-                loguser['ethbal'] -= val;
-                $('#ecoins').html(loguser['ethbal'])
+    //             loguser['ethbal'] -= val;
+    //             $('#ecoins').html(loguser['ethbal'])
 
-                loguser['dollarbalance'] = loguser['dollarbalance'] + total;
-                $('#balance').html(loguser['dollarbalance'])
+    //             loguser['dollarbalance'] = loguser['dollarbalance'] + total;
+    //             $('#balance').html(loguser['dollarbalance'])
 
-                // cansell = true;
-                window.alert('Transaction Successful')
-            }
+    //             // cansell = true;
+    //             window.alert('Transaction Successful')
+    //         }
 
-           /*  else if (val == loguser['ethbal']) {
+    //        /*  else if (val == loguser['ethbal']) {
 
-                loguser['ethbal'] -= val;
-                $('#ecoins').html(loguser['ethbal'])
+    //             loguser['ethbal'] -= val;
+    //             $('#ecoins').html(loguser['ethbal'])
 
-                loguser['dollarbalance'] = loguser['dollarbalance'] + total;
-                $('#balance').html(loguser['dollarbalance'])
+    //             loguser['dollarbalance'] = loguser['dollarbalance'] + total;
+    //             $('#balance').html(loguser['dollarbalance'])
 
-                // cansell = false;
-            } */
+    //             // cansell = false;
+    //         } */
 
-            else if (val > loguser['ethbal']) {
-                window.alert('You do not have enough coins to sell');
-            }
-            localStorage.setItem('loguser', JSON.stringify(loguser));
-            $('#esdol').html('')
-            this.reset();
+    //         else if (val > loguser['ethbal']) {
+    //             window.alert('You do not have enough coins to sell');
+    //         }
+    //         localStorage.setItem('loguser', JSON.stringify(loguser));
+    //         $('#esdol').html('')
+    //         this.reset();
 
-        })
+    //     })
 
-        $('#bbuy').submit(function (e) {
-            e.preventDefault();
-            let val = parseInt($('#bb').val())
-            let total = val * btcrate
+    //     $('#bbuy').submit(function (e) {
+    //         e.preventDefault();
+    //         let val = parseInt($('#bb').val())
+    //         let total = val * btcrate
 
-            if (total <= loguser['dollarbalance']) {
+    //         if (total <= loguser['dollarbalance']) {
 
-                loguser['btcbal'] += val;
-                $('#bcoins').html(loguser['btcbal'])
+    //             loguser['btcbal'] += val;
+    //             $('#bcoins').html(loguser['btcbal'])
 
-                loguser['dollarbalance'] = loguser['dollarbalance'] - total;
-                $('#balance').html(loguser['dollarbalance'])
+    //             loguser['dollarbalance'] = loguser['dollarbalance'] - total;
+    //             $('#balance').html(loguser['dollarbalance'])
 
-                // cansell = true;
-                window.alert('Transaction Successful')
-            }
-            else {
-                window.alert('You cannot buy over limit');
-            }
+    //             // cansell = true;
+    //             window.alert('Transaction Successful')
+    //         }
+    //         else {
+    //             window.alert('You cannot buy over limit');
+    //         }
             
-            localStorage.setItem('loguser', JSON.stringify(loguser));
-            loguser2reguser(loguser)
-            $('#bdol').html('')
-            this.reset();
-        })
+    //         localStorage.setItem('loguser', JSON.stringify(loguser));
+    //         loguser2reguser(loguser)
+    //         $('#bdol').html('')
+    //         this.reset();
+    //     })
 
-        $('#bsell').submit(function (e) {
-            e.preventDefault();
-            let val = parseInt($('#bs').val())
-            let total = val * btcrate
-
-
-
-            if (val <= loguser['btcbal']) {
-
-                loguser['btcbal'] -= val;
-                $('#bcoins').html(loguser['btcbal'])
-
-                loguser['dollarbalance'] = loguser['dollarbalance'] + total;
-                $('#balance').html(loguser['dollarbalance'])
-
-                // cansell = true;
-                window.alert('Transaction Successful')
-            }
-
-           /*  else if (val == loguser['btcbal']) {
-
-                loguser['btcbal'] -= val;
-                $('#bcoins').html(loguser['btcbal'])
-
-                loguser['dollarbalance'] = loguser['dollarbalance'] + total;
-                $('#balance').html(loguser['dollarbalance'])
-
-                // cansell = false;
-            } */
-
-            else if (val > loguser['btcbal']) {
-                window.alert('You do not have enough coins to sell');
-            }
-            localStorage.setItem('loguser', JSON.stringify(loguser));
-            $('#bsdol').html('')
-            this.reset();
-
-        })
+    //     $('#bsell').submit(function (e) {
+    //         e.preventDefault();
+    //         let val = parseInt($('#bs').val())
+    //         let total = val * btcrate
 
 
-    }
+
+    //         if (val <= loguser['btcbal']) {
+
+    //             loguser['btcbal'] -= val;
+    //             $('#bcoins').html(loguser['btcbal'])
+
+    //             loguser['dollarbalance'] = loguser['dollarbalance'] + total;
+    //             $('#balance').html(loguser['dollarbalance'])
+
+    //             // cansell = true;
+    //             window.alert('Transaction Successful')
+    //         }
+
+    //        /*  else if (val == loguser['btcbal']) {
+
+    //             loguser['btcbal'] -= val;
+    //             $('#bcoins').html(loguser['btcbal'])
+
+    //             loguser['dollarbalance'] = loguser['dollarbalance'] + total;
+    //             $('#balance').html(loguser['dollarbalance'])
+
+    //             // cansell = false;
+    //         } */
+
+    //         else if (val > loguser['btcbal']) {
+    //             window.alert('You do not have enough coins to sell');
+    //         }
+    //         localStorage.setItem('loguser', JSON.stringify(loguser));
+    //         $('#bsdol').html('')
+    //         this.reset();
+
+    //     })
+
+
+    // }
 })
 
 
