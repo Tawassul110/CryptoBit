@@ -1089,7 +1089,7 @@ label.error{
 #tabs{
     border-radius: var(--boxborder-radius);
     box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.4);
-    width: fit-content;
+    /* width:fit-content ; */
     margin: var(--marginauto);
     padding: 40px 40px 0px;
 }
@@ -1147,7 +1147,9 @@ a#ui-id-2:active{
 }
 
 
-
+.buy-form{
+    width: 50%;
+}
 
 
 /**
