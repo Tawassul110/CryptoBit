@@ -6,7 +6,8 @@ $(document).ready(function () {
     }
 
     let path = window.location.pathname;
-    let pagename = path.split("/").pop().split(".")[0];
+    // let pagename = path.split("home/").pop().split(".")[0];
+    let pagename = path.split("home/").pop().split("/")[0];
     // console.log('Page Name is', pagename);
 
     if (pagename == 'login' | pagename == 'register' | pagename == 'forgetpassword') {
@@ -15,9 +16,9 @@ $(document).ready(function () {
         $('#signinbut').html('SIGN IN');
     }
 
-    // else if (pagename == 'express' | pagename == 'market' | pagename == 'visacard' && (JSON.parse(localStorage.getItem('logsucc')) == 'false' | !JSON.parse(localStorage.getItem('logsucc')))) {
-    //     window.location.href = 'login.html'
-    // }
+    else if (pagename == 'express' | pagename == 'trade' | pagename == 'market' | pagename == 'visacard' | pagename == 'coin' | pagename == 'buy' && (JSON.parse(localStorage.getItem('logsucc')) == 'false' | !JSON.parse(localStorage.getItem('logsucc')))) {
+        window.location.href = '/home/login'
+    }
 
     else if (pagename == 'index') {
         if (JSON.parse(localStorage.getItem('logsucc')) == 'false' | !JSON.parse(localStorage.getItem('logsucc'))) {
@@ -300,7 +301,7 @@ $(document).ready(function () {
         if (logsucc) {
             localStorage.setItem('logsucc', JSON.stringify('true'));
             localStorage.setItem('loguser', JSON.stringify(loguser));
-            window.location.href = 'express.html'
+            window.location.href = '/home/trade'
         }
 
 
@@ -325,7 +326,7 @@ $(document).ready(function () {
             }
         }
         $("#forgotForm").append('<span class="success">New password successfully set.</span>');
-        window.location.href = 'login.html'
+        window.location.href = '/home/login'
     });
 
 

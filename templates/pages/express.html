@@ -44,11 +44,11 @@ Express
                         <div id="tabs" class="blue-box tab-box" data-aos="fade-up" data-aos-duration="1000"
                             data-aos-delay="">
                             <ul class="tab-list d-flex center items-start">
-                                <li><a href="#tabs-1" class="active">BUY</a></li>
+                                <li class="active">BUY</a></li>
                             </ul>
                             <div id="tabs-1">
 
-                                <form id="ebuy" class="d-flex center flex-column items-start" action="">
+                                <form id="ebuy" class="d-flex center flex-column items-start" action="" method="POST"> 
                                     {% csrf_token %}
                                     <div class="coin-specify-box d-flex space-between">
                                         <div class="d-flex items-centre">
