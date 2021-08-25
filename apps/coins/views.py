@@ -18,3 +18,10 @@ def coinDetail(request,coin_id):
      }   
     return render(request,'pages/details.html', coindata)
 
+def buy(request,coinId):
+    coinn = Coin.objects.get(id = coinId)
+    coinD = {
+        'coinn' : coinn
+    }
+
+    return render(request,'pages/express.html', coinD)
