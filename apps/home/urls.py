@@ -11,5 +11,5 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('details/', views.details, name='details'),
     path('coinDisplay/', views.coinDisplay, name='coinDisplay'),
-    path('subscribe/submit', views.subscribe, name='subscribe_submit')
+    path('subscribe/submit', views.subscribe, name='subscribe_submit'),
 ]

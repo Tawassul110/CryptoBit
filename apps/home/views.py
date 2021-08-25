@@ -72,6 +72,7 @@ def login(request):
     return render(request, 'pages/login.html')
 
 
+
 def coinDisplay(request):
     context = {
         'coins' : get_coins(),

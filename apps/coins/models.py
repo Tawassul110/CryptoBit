@@ -13,5 +13,6 @@ class Coin(models.Model):
     sparkline = models.ImageField(upload_to="media/coins" , null=True)
 
     def __str__(self):
+
         return self.name 
 
