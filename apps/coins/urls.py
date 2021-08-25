@@ -19,6 +19,6 @@ from . import views
 
 urlpatterns = [
     path(r'<int:coin_id>', views.coinDetail, name='coindetail'),
-    path('<int:coinId>/', views.buy, name='buy') 
+    path(r'buy/<int:coinId>', views.buy, name='buy') 
     
 ]
