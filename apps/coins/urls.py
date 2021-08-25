@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     path(r'<int:coin_id>', views.coinDetail, name='coindetail'),
     path(r'buy/<int:coinId>', views.buy, name='buy') 
+    # fccgvgv
     
 ]
