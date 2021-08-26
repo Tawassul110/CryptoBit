@@ -159,6 +159,16 @@ $(document).ready(function () {
 
     })
 
+    // BUY FORM VALIDATION
+    $("ebuy").validate({
+        rules: {
+            userEmail: {
+
+            }
+
+        }
+    })
+
 
     // Loader
     setTimeout(() => {
