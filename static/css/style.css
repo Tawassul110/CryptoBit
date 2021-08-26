@@ -1149,10 +1149,14 @@ a#ui-id-2:active{
     background: var(--hover-button-gradient);
     
 }
-
-
 .buy-form{
     width: 50%;
+}
+label#userEmail-error{
+    color: red;
+}
+label#userAcccno-error {
+    color: red;
 }
 
 

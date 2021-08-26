@@ -160,12 +160,26 @@ $(document).ready(function () {
     })
 
     // BUY FORM VALIDATION
-    $("ebuy").validate({
+    $("#ebuy").validate({
         rules: {
             userEmail: {
-
+                required: true,
+                email: true
+            },
+            userAccno: {
+                required: true,
+                rangelength: [14, 14]
             }
-
+        },
+        messages: {
+            userEmail: {
+                required: "Email is Required*",
+                email: "Please enter a valid email address*"
+            },
+            userAccno: {
+                required: "*Required",
+                rangelength: "*Bank Account Number must contain 14 Digits",
+            }
         }
     })
 
