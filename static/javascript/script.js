@@ -163,7 +163,9 @@ $(document).ready(function () {
     $("#ebuy").validate({
         rules: {
             fullName: {
-                required: true,        
+                required: true,
+                lettersonly: true
+             
             },         
             userEmail: {
                 required: true,
@@ -176,14 +178,16 @@ $(document).ready(function () {
         },
         messages: {
             fullName: {
-                required: "Name is Required*"
+                required: "Required*",
+                lettersonly: "Only alphabets allowed"
+            
             },           
             userEmail: {
-                required: "Email is Required*",
+                required: "Required*",
                 email: "Please enter a valid email address*"
             },
             userAccno: {
-                required: "Account Number is Required*",
+                required: "Required*",
                 rangelength: "*Bank Account Number must contain 14 Digits",
             }
         }
