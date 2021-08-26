@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Coin
-from .models import Customer
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.utils.html import strip_tags
@@ -39,7 +38,8 @@ def transaction(request,coinid):
     quantity = request.POST.get('quantity')
     email = request.POST.get('userEmail')
     accno = request.POST.get('userAccno')
-    name = request.POST.get('fullName')
+    fname = request.POST.get('firstName')
+    lname = request.POST.get('lastName')
 
     # save.quantity = quantity
     # save.email = email
@@ -50,7 +50,8 @@ def transaction(request,coinid):
     receipt = {
         'Coin' : coin,
         'quantity' : quantity,
-        'name' : name,
+        'fname' : fname,
+        'lname' : lname,
         'email' : email ,
         'accno' : accno
 
