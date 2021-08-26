@@ -33,7 +33,7 @@ def transaction(request,coinid):
     coin = Coin.objects.get(id = coinid)
     # price = Coin.price
 
-    save = Customer()
+   
 
     quantity = request.POST.get('quantity')
     email = request.POST.get('userEmail')
