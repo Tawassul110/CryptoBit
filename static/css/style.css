@@ -40,6 +40,9 @@ html, body {
     float: left;
     
 }
+.width100{
+    width: 100%;
+}
 
 
 .fontweight700{
@@ -1152,13 +1155,16 @@ a#ui-id-2:active{
 .buy-form{
     width: 50%;
 }
-label#userEmail-error{
+/* label#userEmail-error{
     color: red;
 }
 label#userAcccno-error {
     color: red;
 }
 label#fullName-error {
+    color: red;
+} */
+#ebuy-error{
     color: red;
 }
 

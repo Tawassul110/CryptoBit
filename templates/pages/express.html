@@ -48,7 +48,7 @@ Express
                                 {% comment %} <form id="ebuy" class="d-flex center flex-column items-start" action="{% url 'transaction'  coinid=coinn.id%}" method="POST">  {% endcomment %}
                                 <form id="ebuy" class="d-flex center flex-column items-start" action="{% url 'transaction'  coinid=coinn.id%}" method="POST"> 
                                     {% csrf_token %}
-                                    <div class="coin-specify-box d-flex space-between">
+                                    <div class="coin-specify-box d-flex space-between width100">
                                         <div class="d-flex items-centre">
                                             <a href="index.html"><img src="{{ coinn.logo_image.url }}"> </a>
                                             <h2 class="white-text">{{ coinn.name }}</h2>
