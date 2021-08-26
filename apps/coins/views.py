@@ -57,7 +57,7 @@ def transaction(request,coinid):
         # 'total' : 'quantity' * price
     }
 
-    # email_template_html = render_to_string('buy/receipt.html', receipt)
+    # email_template_html = render_to_string('emails/receipt.html', receipt)
     # email_template_txt = strip_tags(email_template_html)
 
     # subject = 'Transaction Successful | cryptobit'
