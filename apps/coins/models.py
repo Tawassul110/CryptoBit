@@ -19,7 +19,7 @@ class Coin(models.Model):
 class Customer(models.Model):
     name = models.CharField( max_length=50)
     email = models.EmailField( max_length=254)
-    acc_no = models.IntegerField(max_length=14)
+    acc_no = models.IntegerField()
     quantity = models.SmallIntegerField()
 
     def __str__(self):
