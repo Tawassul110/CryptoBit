@@ -1100,7 +1100,7 @@ label.error{
 #tabs-1, #tabs-2{
     padding-top: 30px;
 }
-#tabs input[type="number"], #tabs input[type="email"] {
+#tabs input[type="number"], #tabs input[type="email"],#tabs input[type="text"] {
     padding: 15px 10px;
     border: solid 1px var(--grey-text);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
