@@ -45,7 +45,7 @@ Express
                                 <li class="active button buy-tab">BUY</a></li>
                             </ul>
                             <div id="tabs-1">
-
+                                {% comment %} <form id="ebuy" class="d-flex center flex-column items-start" action="{% url 'transaction'  coinid=coinn.id%}" method="POST">  {% endcomment %}
                                 <form id="ebuy" class="d-flex center flex-column items-start" action="{% url 'transaction'  coinid=coinn.id%}" method="POST"> 
                                     {% csrf_token %}
                                     <div class="coin-specify-box d-flex space-between">
@@ -66,7 +66,7 @@ Express
                                         of your balance.</p> -->
                                     
                                     <label for="">Full Name</label>
-                                    <input type="text" name="full-name" placeholder="Enter Your Full Name" required>
+                                    <input type="text" name="fullName" placeholder="Enter Your Full Name" required>
 
                                     <label for="">Email Address</label>
                                     <input type="email" name="useremail" placeholder="Enter Your Email Address" name="userEmail" required>

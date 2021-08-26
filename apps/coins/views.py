@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Coin
+from .models import Customer
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.utils.html import strip_tags
@@ -30,7 +31,7 @@ def buy(request,coinId):
     return render(request,'pages/express.html', coinD)
 
 def transaction(request,coinid):
-    Coin = Coin.objects.get(id = coinid)
+    coin = Coin.objects.get(id = coinid)
     # price = Coin.price
 
     save = Customer()
@@ -38,11 +39,21 @@ def transaction(request,coinid):
     quantity = request.POST.get('quantity')
     email = request.POST.get('userEmail')
     accno = request.POST.get('userAccno')
+    name = request.POST.get('fullName')
+
+    # save.quantity = quantity
+    # save.email = email
+    # save.acc_no = accno
+    # save.name = name
+
+    # save.save()
     receipt = {
-        # 'Coin' : Coin,
-        'quantity' :quantity ,
-        'email' : email,
-        'accno' : accno,
+        'Coin' : coin,
+        'quantity' : quantity,
+        'name' : name,
+        'email' : email ,
+        'accno' : accno
+
         # 'total' : 'quantity' * price
     }
 
