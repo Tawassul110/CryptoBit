@@ -18,8 +18,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path(r'<int:coin_id>', views.coinDetail, name='coindetail'),
-    path(r'buy/<int:coinId>', views.buy, name='buy') 
-    # fccgvgv
+    path(r'coin/<int:coin_id>', views.coinDetail, name='coindetail'),
+    path(r'buy/<int:coinId>', views.buy, name='buy') ,
+    path('transaction/', views.transaction, name='transaction'),
+    path(r'transaction/<int:coinid>', views.transaction, name='transaction')
     
 ]

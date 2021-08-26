@@ -16,7 +16,7 @@ $(document).ready(function () {
         $('#signinbut').html('SIGN IN');
     }
 
-    else if (pagename == 'express' | pagename == 'trade' | pagename == 'market' | pagename == 'visacard' | pagename == 'coin' | pagename == 'buy' && (JSON.parse(localStorage.getItem('logsucc')) == 'false' | !JSON.parse(localStorage.getItem('logsucc')))) {
+    else if (pagename == 'express' | pagename == 'trade' | pagename == 'market' | pagename == 'visacard' | pagename == 'coin' | pagename == 'buy' | pagename == 'coinDisplay' && (JSON.parse(localStorage.getItem('logsucc')) == 'false' | !JSON.parse(localStorage.getItem('logsucc')))) {
         window.location.href = '/home/login'
     }
 
@@ -301,7 +301,7 @@ $(document).ready(function () {
         if (logsucc) {
             localStorage.setItem('logsucc', JSON.stringify('true'));
             localStorage.setItem('loguser', JSON.stringify(loguser));
-            window.location.href = '/home/trade'
+            window.location.href = '/home/market'
         }
 
 

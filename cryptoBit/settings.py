@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'apps.home.apps.HomeConfig' ,
     'apps.news.apps.NewsConfig' ,
     'apps.coins.apps.CoinsConfig',
-    'apps.visacard.apps.VisacardConfig'
+    'apps.visacard.apps.VisacardConfig',
 ]
 
 MIDDLEWARE = [

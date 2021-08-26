@@ -22,7 +22,7 @@
                                 <a href="{% url 'register' %}">REGISTER NOW</a>
                             </div>
                             <div class="button">
-                                <a href="{% url 'trade' %}"> BUY CRYPTO NOW</a>
+                                <a href="{% url 'market' %}"> BUY CRYPTO NOW</a>
                             </div>
                         </div>
                     </div>
@@ -181,7 +181,7 @@
                                 <a href="#">REGISTER NOW</a>
                             </div>
                             <div class="button">
-                                <a href="{% url 'trade' %}"> BUY CRYPTO NOW</a>
+                                <a href="{% url 'market' %}"> BUY CRYPTO NOW</a>
                             </div>
                         </div>
 
@@ -260,13 +260,23 @@
         <section id="home-section-7" class="section-padding hundred navyblue">
             <div class="container">
                 <div class="d-flex center">
-                    <h2 class="fontsize40 fontweight400 margin-bottom80 white-text" data-aos="fade-up" data-aos-duration="1000">Subscribe to us!</h2>
+                    <h2 class="fontsize40 fontweight400 margin-bottom80 white-text" data-aos="fade-up" data-aos-duration="1000">Contact us!</h2>
                 </div>
                 <div class="">
                     <form id="subscribe" method="post" action="{% url 'subscribe_submit' %}" class="d-flex center relative padding-bottom50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     {% csrf_token %}
+                        <label for="">Full Name</label>
+                        <input type="text" placeholder="Enter Your Full Name" name="full-name" class="darkblue">
+
+                        <label for="">Phone no</label>
+                        <input type="number" placeholder="Enter Your Phone No" class="darkblue" name="phone-number">
+
+                        <label for="">Message</label>
+                        <textarea type="text" placeholder="Type Your Message Here" name="message" class="darkblue"> </textarea>
+                        
+                        <label for="">Email Address</label>
                         <input type="email" name="subscribe-email" placeholder="Enter Your Email Address " class="absolute darkblue" >
-                        <input type="submit" value="SUBSCRIBE" class="button relative" >
+                        <input type="submit" value="SUBMIT" class="button relative" >
                     </form>
                         
                     
