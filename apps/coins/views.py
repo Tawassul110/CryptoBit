@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from .models import Coin
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
+from django.utils.html import strip_tags
 
 # Create your views here.
 def get_coins():
@@ -25,3 +28,38 @@ def buy(request,coinId):
     }
 
     return render(request,'pages/express.html', coinD)
+
+def transaction(request,coinid):
+    Coin = Coin.objects.get(id = coinid)
+    # price = Coin.price
+
+    save = Customer()
+
+    quantity = request.POST.get('quantity')
+    email = request.POST.get('user-email')
+    accno = request.POST.get('user-accno')
+    receipt = {
+        # 'Coin' : Coin,
+        'quantity' :quantity ,
+        'email' : email,
+        'accno' : accno,
+        # 'total' : 'quantity' * price
+    }
+
+    # email_template_html = render_to_string('buy/receipt.html', receipt)
+    # email_template_txt = strip_tags(email_template_html)
+
+    # subject = 'Transaction Successful | cryptobit'
+    # from_email = 'subscribe@cryptobit.com'
+    # to_email = ['tawassul02@gmail.com']
+    # send_mail(
+    #     subject=subject,
+    #     from_email=from_email, 
+    #     recipient_list = to_email, 
+    #     html_message=email_template_html, 
+    #     message=email_template_txt
+    #     )
+
+
+
+    return render(request,'buy/receipt.html', receipt)

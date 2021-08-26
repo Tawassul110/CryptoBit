@@ -1,0 +1,47 @@
+{% extends '../template.html' %}
+
+{% block mainContent %}
+<main>
+    <section class="section-padding hundred darkblue" id="register-section-1">
+        <div class="container">
+            <div class="d-flex space-around items-centre">
+                <h2 class="thankyou white-text">
+                    Transaction Successful!
+                </h2>
+                <div class="receipt ">
+                    <h3 class="white-text margin-bottom26">Transaction Summary</h3>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>Coin Name:</td>
+                                <td>{{Coin.name}} </td>
+
+                            </tr>
+                            <tr>
+                                <td>Quantity:</td>
+                                <td>{{receipt.quantity}} </td>
+                            </tr>
+                            <tr>
+                                <td>Price per coin:</td>
+                                <td>{{Coin.price}} </td>
+                            </tr>
+                            <tr>
+                                <td>Total Amount:</td>
+                                <td>{{receipt.total}} </td>
+                            </tr>
+                            <tr>
+                                <td>Email Address:</td>
+                                <td>{{receipt.email}} </td>
+                            </tr>
+                            <tr>
+                                <td>Account Number:</td>
+                                <td>{{receipt.accno}} </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock mainContent %}
