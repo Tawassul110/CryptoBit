@@ -162,6 +162,9 @@ $(document).ready(function () {
     // BUY FORM VALIDATION
     $("#ebuy").validate({
         rules: {
+            fullName: {
+                required: true,        
+            },         
             userEmail: {
                 required: true,
                 email: true
@@ -172,12 +175,15 @@ $(document).ready(function () {
             }
         },
         messages: {
+            fullName: {
+                required: "Name is Required*"
+            },           
             userEmail: {
                 required: "Email is Required*",
                 email: "Please enter a valid email address*"
             },
             userAccno: {
-                required: "*Required",
+                required: "Account Number is Required*",
                 rangelength: "*Bank Account Number must contain 14 Digits",
             }
         }
