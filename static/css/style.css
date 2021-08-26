@@ -1158,6 +1158,9 @@ label#userEmail-error{
 label#userAcccno-error {
     color: red;
 }
+label#fullName-error {
+    color: red;
+}
 
 
 /**
