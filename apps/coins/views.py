@@ -36,8 +36,8 @@ def transaction(request,coinid):
     save = Customer()
 
     quantity = request.POST.get('quantity')
-    email = request.POST.get('user-email')
-    accno = request.POST.get('user-accno')
+    email = request.POST.get('userEmail')
+    accno = request.POST.get('userAccno')
     receipt = {
         # 'Coin' : Coin,
         'quantity' :quantity ,
