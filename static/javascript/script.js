@@ -162,11 +162,16 @@ $(document).ready(function () {
     // BUY FORM VALIDATION
     $("#ebuy").validate({
         rules: {
-            fullName: {
+            firstName: {
                 required: true,
                 lettersonly: true
              
-            },         
+            },
+            lastName: {
+                required: true,
+                lettersonly: true
+             
+            },             
             userEmail: {
                 required: true,
                 email: true
@@ -177,11 +182,17 @@ $(document).ready(function () {
             }
         },
         messages: {
-            fullName: {
+            firstName: {
                 required: "Required*",
                 lettersonly: "Only alphabets allowed"
             
-            },           
+            },
+            lastName: {
+                required: "Required*",
+                lettersonly: "Only alphabets allowed"
+            
+            },    
+            
             userEmail: {
                 required: "Required*",
                 email: "Please enter a valid email address*"
