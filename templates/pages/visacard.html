@@ -86,26 +86,25 @@ Visacard
                 <div class="benefits d-flex">
 
                     <div class="d-flex flex-row wrap">
-                        <div class="text-padding col-sm-6" data-aos="fade-right"
-                            data-aos-easing="linear" data-aos-duration="1500">
+                        
                             {% for visacard in visacard %}
+                            <div class="text-padding col-sm-6" data-aos="fade-right"
+                            data-aos-easing="linear" data-aos-duration="1500">
+                                <div class="visacard-benefits-image">
 
-                            <div class="visacard-benefits-image">
+                                    <img src="{{ visacard.featured_image.url }}"
+                                        alt="logo">
+                                </div>
+                                <div class="visacard-benefits-heading">
+                                    <h3>{{ visacard.title }}</h3>
+                                </div>
+                                <div class="visacard-benefits-text">
+                                    <p>{{ visacard.content }}</p>
+                                </div>
 
-                                <img src="{{ visacard.featured_image.url }}"
-                                    alt="logo">
+
                             </div>
-                            <div class="visacard-benefits-heading">
-                                <h3>{{ visacard.title }}</h3>
-                            </div>
-                            <div class="visacard-benefits-text">
-                                <p>{{ visacard.content }}</p>
-                            </div>
-
-
-
                             {% endfor %}
-                        </div>
                     </div>
 
 
