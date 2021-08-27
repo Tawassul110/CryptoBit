@@ -14,7 +14,7 @@ Details
         <div class="container">
             <div class="coin-specify-box d-flex space-between">
                 <div class="d-flex items-centre">
-                    <a href="index.html"><img src="{{ coin.logo_image.url }}"> </a>
+                    <a href="index.html"><img src="{{ coin.logo_image.url }}" alt={{ coinn.name }}> </a>
                     <h2 class="white-text">{{ coin.name }}</h2>
                 </div>
                 <div class="coin-price-box d-flex items-centre center">
@@ -47,6 +47,7 @@ Details
                 <div class="d-flex center">
                     <a href="{% url 'buy' coinId=coin.id %}" class="button">BUY COINS</a>
                 </div>
+            </div>
             </div>
         </section>
     </main>

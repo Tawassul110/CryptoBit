@@ -48,8 +48,7 @@ Express
                                 <li class="active button buy-tab">BUY</a></li>
                             </ul>
                             <div id="tabs-1">
-                                {% comment %} <form id="ebuy" class="d-flex center flex-column items-start" action="{% url 'transaction'  coinid=coinn.id%}" method="POST">  {% endcomment %}
-                                <form id="ebuy" class="d-flex center flex-column items-start" action="{% url 'transaction'  coinid=coinn.id%}" method="POST"> 
+                            <form id="ebuy" class="d-flex center flex-column items-start" action="{% url 'transaction'  coinid=coinn.id%}" method="POST"> 
                                     {% csrf_token %}
                                     <div class="coin-specify-box d-flex space-between width100">
                                         <div class="d-flex items-centre">
