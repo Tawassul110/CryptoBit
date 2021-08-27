@@ -27,7 +27,8 @@
                             </tr>
                             <tr>
                                 <td class="white-text">Total Amount:</td>
-                                <td>$ {% widthratio Coin.price 1 quantity %} </td>
+                                {% comment %} <td>$ {% widthratio Coin.price 1 quantity %} </td> {% endcomment %}
+                                <td>{{quantity|multiply:Coin.price}}</td>
                             </tr>
                             <tr>
                                 <td class="white-text">Full Name:</td>
