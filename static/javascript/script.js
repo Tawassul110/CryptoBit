@@ -112,6 +112,11 @@ $(document).ready(function () {
                 email: true
 
             },
+            foraccno: {
+                required: true,
+                rangelength: [14, 14],
+                equalTo: "#regaccnum"
+            },
             forpwd: {
                 required: true,
                 minlength: 6,
@@ -126,6 +131,11 @@ $(document).ready(function () {
             foremail: {
                 required: "*Required",
                 email: "*Please enter a valid email address"
+            },
+            foraccno: {
+                required: "*Required",
+                rangelength: "*Bank Account Number must contain 14 Digits",
+                equalTo: "Incorrect Account Number"
             },
             forpwd: {
                 required: "*Required",
@@ -380,14 +390,17 @@ $(document).ready(function () {
 
     let foremail;
     let forpwd;
+    let foraccnum;
     $("#forgotForm").submit(function (event) {
         event.preventDefault();
         foremail = $("input[name=foremail]").val();
         forpwd = $("input[name=forpwd]").val();
-        console.log(foremail, forpwd);
+        foraccnum = $("input[name=foraccnum]").val();
+        console.log(foremail, foraccnum, forpwd);
         let registered_users = JSON.parse(localStorage.getItem('users'));
         for (let index = 0; index < registered_users.length; index++) {
-            if (registered_users[index]['email'] == foremail) {
+            if (registered_users[index]['email'] == foremail)
+                (registered_users[index]['account'] == foraccnum); {
                 registered_users[index]['password'] = forpwd;
                 localStorage.setItem('users', JSON.stringify(registered_users));
             }
