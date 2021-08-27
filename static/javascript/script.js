@@ -599,7 +599,12 @@ $(document).ready(function () {
 
 
     // }
+    if (localStorage['loguser']) {
+        $("input[name='userEmail']").val(JSON.parse(window.localStorage.getItem('loguser'))['email']);
+        $("input[name='userAccno']").val(JSON.parse(window.localStorage.getItem('loguser'))['accNum'])
+        }
 })
 
 
 
+console.log(JSON.parse(window.localStorage.getItem('loguser'))['accNum']); 

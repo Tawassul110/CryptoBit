@@ -32,12 +32,12 @@
                             </tr>
                             <tr>
                                 <td class="white-text">Total Amount:</td>
-                                <td>{{quantity|multiply:Coin.price}}</td>
+                                <td>$ {{quantity|multiply:Coin.price}}</td>
                             </tr>
-                            <tr>
+                            {% comment %} <tr>
                                 <td class="white-text">Full Name:</td>
                                 <td>{{fname}} {{lname}} </td>
-                            </tr>
+                            </tr> {% endcomment %}
                             
                             <tr>
                                 <td class="white-text">Email Address:</td>

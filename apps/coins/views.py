@@ -38,8 +38,8 @@ def transaction(request,coinid):
     quantity = request.POST.get('quantity')
     email = request.POST.get('userEmail')
     accno = request.POST.get('userAccno')
-    fname = request.POST.get('firstName')
-    lname = request.POST.get('lastName')
+    # fname = request.POST.get('firstName')
+    # lname = request.POST.get('lastName')
 
     # save.quantity = quantity
     # save.email = email
@@ -50,28 +50,27 @@ def transaction(request,coinid):
     receipt = {
         'Coin' : coin,
         'quantity' : quantity,
-        'fname' : fname,
-        'lname' : lname,
+        # 'fname' : fname,
+        # 'lname' : lname,
         'email' : email ,
         'accno' : accno
 
         # 'total' : 'quantity' * price
     }
 
-    email_template_html = render_to_string('emails/receipt.html', receipt)
-    email_template_txt = strip_tags(email_template_html)
+    # receipt email
+    # email_template_html = render_to_string('emails/receipt.html', receipt)
+    # email_template_txt = strip_tags(email_template_html)
 
-    subject = 'Transaction Successful | cryptobit'
-    from_email = 'subscribe@cryptobit.com'
-    to_email = ['tawassul02@gmail.com']
-    send_mail(
-        subject=subject,
-        from_email=from_email, 
-        recipient_list = to_email, 
-        html_message=email_template_html, 
-        message=email_template_txt
-        )
+    # subject = 'Transaction Successful | cryptobit'
+    # from_email = 'subscribe@cryptobit.com'
+    # to_email = ['tawassul02@gmail.com']
+    # send_mail(
+    #     subject=subject,
+    #     from_email=from_email, 
+    #     recipient_list = to_email, 
+    #     html_message=email_template_html, 
+    #     message=email_template_txt
+    #     )
 
-    print(accno)
-    print(receipt)
     return render(request,'buy/receipt.html', receipt)
