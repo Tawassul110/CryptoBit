@@ -112,6 +112,11 @@ $(document).ready(function () {
                 email: true
 
             },
+            foraccno: {
+                required: true,
+                rangelength: [14, 14],
+                equalTo: "#regaccnum"
+            },
             forpwd: {
                 required: true,
                 minlength: 6,
@@ -126,6 +131,11 @@ $(document).ready(function () {
             foremail: {
                 required: "*Required",
                 email: "*Please enter a valid email address"
+            },
+            foraccno: {
+                required: "*Required",
+                rangelength: "*Bank Account Number must contain 14 Digits",
+                equalTo: "Incorrect Account Number"
             },
             forpwd: {
                 required: "*Required",
