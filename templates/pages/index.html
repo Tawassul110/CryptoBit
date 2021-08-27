@@ -262,28 +262,7 @@
                 <div class="d-flex center">
                     <h2 class="fontsize40 fontweight400 margin-bottom80 white-text" data-aos="fade-up" data-aos-duration="1000">Send us a message!</h2>
                 </div>
-                    <!-- <div class="dflex center space-around width100">
-                        <div class=" padding-bottom50 flex-column subscribe-form  width100">
-                            <form id="subscribe" method="post" action="{% url 'subscribe_submit' %}"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                                {% csrf_token %}
-                                
-                                <input type="text" name="subscribeName" placeholder="Your Name " class="darkblue margin-bottom26 capitalize" >
-                                <input type="number" name="subscribeNumber" placeholder="Phone Number " class="darkblue margin-bottom26" >
-                                <input type="email" name="subscribeEmail" placeholder="Email Address " class="darkblue margin-bottom26" >
-                                <textarea type="text" name="subscribeMessage" placeholder="Type Your Message Here" class="darkblue margin-bottom26 message-area capitalize"> </textarea>
-                            
-                                <input type="submit" value="SEND MESSAGE" class="button relative center" >
-                                
-                                </form>
-                                <div class="width100">
-                                    <img src="{% static 'images/subscribe.png' %}" alt="subscribe" class="subscribe-img" >
-                                </div>
-                            </div>    
-                            
-                            
-        
-                            
-                        </div> -->
+                   
                     
                             <div class="dflex center space-around width100 flex-column subscribe-form">
                                 <form id="subscribe" method="post" action="{% url 'subscribe_submit' %}"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
@@ -292,7 +271,7 @@
                                     <input type="text" name="subscribeName" placeholder="Your Name " class="darkblue margin-bottom26 capitalize" >
                                     <input type="number" name="subscribeNumber" placeholder="Phone Number " class="darkblue margin-bottom26" >
                                     <input type="email" name="subscribeEmail" placeholder="Email Address " class="darkblue margin-bottom26" >
-                                    <textarea type="text" name="subscribeMessage" placeholder="Type Your Message Here" class="darkblue margin-bottom26 message-area capitalize" required> </textarea>
+                                    <textarea type="text" name="subscribeMessage" placeholder="Type Your Message Here" class="darkblue margin-bottom26 capitalize" required> </textarea>
                                 </div>
                                     <input type="submit" value="SEND MESSAGE" class="button" >
                                     

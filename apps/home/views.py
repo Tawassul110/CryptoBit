@@ -20,9 +20,9 @@ def home(request):
 
 def subscribe(request):
     subscribe_name = request.POST.get('subscribeName')
-    subscribe_name = request.POST.get('subscribeNumber')
+    subscribe_number = request.POST.get('subscribeNumber')
     subscribe_email = request.POST.get('subscribeEmail')
-    subscribe_name = request.POST.get('subscribeMessage')
+    subscribe_message = request.POST.get('subscribeMessage')
 
     context = {
         'subscribe_name' : subscribe_name,
