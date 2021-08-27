@@ -189,7 +189,9 @@ ul li{
 .flex-column{
     flex-direction: column;
 }
-
+.flex-row{
+    flex-direction: row;
+}
 .items-centre{
     align-items: center;
 }
@@ -1165,6 +1167,9 @@ label#firstName-error {
     color: red;
 }
 label#lastName-error {
+    color: red;
+}
+label#userAccno-error{
     color: red;
 }
 
