@@ -260,29 +260,49 @@
         <section id="home-section-7" class="section-padding hundred navyblue">
             <div class="container">
                 <div class="d-flex center">
-                    <h2 class="fontsize40 fontweight400 margin-bottom80 white-text" data-aos="fade-up" data-aos-duration="1000">Contact us!</h2>
+                    <h2 class="fontsize40 fontweight400 margin-bottom80 white-text" data-aos="fade-up" data-aos-duration="1000">Send us a message!</h2>
                 </div>
-                <div class="">
-                    <form id="subscribe" method="post" action="{% url 'subscribe_submit' %}" class="d-flex center relative padding-bottom50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    {% csrf_token %}
-                        <label for="">Full Name</label>
-                        <input type="text" placeholder="Enter Your Full Name" name="fullName" class="darkblue">
-
-                        <label for="">Phone no</label>
-                        <input type="number" placeholder="Enter Your Phone No" class="darkblue" name="phone-number">
-
-                        <label for="">Message</label>
-                        <textarea type="text" placeholder="Type Your Message Here" name="message" class="darkblue"> </textarea>
+                    <!-- <div class="dflex center space-around width100">
+                        <div class=" padding-bottom50 flex-column subscribe-form  width100">
+                            <form id="subscribe" method="post" action="{% url 'subscribe_submit' %}"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                {% csrf_token %}
+                                
+                                <input type="text" name="subscribeName" placeholder="Your Name " class="darkblue margin-bottom26 capitalize" >
+                                <input type="number" name="subscribeNumber" placeholder="Phone Number " class="darkblue margin-bottom26" >
+                                <input type="email" name="subscribeEmail" placeholder="Email Address " class="darkblue margin-bottom26" >
+                                <textarea type="text" name="subscribeMessage" placeholder="Type Your Message Here" class="darkblue margin-bottom26 message-area capitalize"> </textarea>
+                            
+                                <input type="submit" value="SEND MESSAGE" class="button relative center" >
+                                
+                                </form>
+                                <div class="width100">
+                                    <img src="{% static 'images/subscribe.png' %}" alt="subscribe" class="subscribe-img" >
+                                </div>
+                            </div>    
+                            
+                            
+        
+                            
+                        </div> -->
+                    
+                            <div class="dflex center space-around width100 flex-column subscribe-form">
+                                <form id="subscribe" method="post" action="{% url 'subscribe_submit' %}"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    {% csrf_token %}
+                                    
+                                    <input type="text" name="subscribeName" placeholder="Your Name " class="darkblue margin-bottom26 capitalize" >
+                                    <input type="number" name="subscribeNumber" placeholder="Phone Number " class="darkblue margin-bottom26" >
+                                    <input type="email" name="subscribeEmail" placeholder="Email Address " class="darkblue margin-bottom26" >
+                                    <textarea type="text" name="subscribeMessage" placeholder="Type Your Message Here" class="darkblue margin-bottom26 message-area capitalize"> </textarea>
+                                </div>
+                                    <input type="submit" value="SEND MESSAGE" class="button" >
+                                    
+                                    </form>
                         
-                        <label for="">Email Address</label>
-                        <input type="email" name="subscribe-email" placeholder="Enter Your Email Address " class="absolute darkblue" >
-                        <input type="submit" value="SUBMIT" class="button relative" >
-                    </form>
+                            
                         
                     
-
+                    </div>
                     
-                </div>
             </div>
         </section>
 

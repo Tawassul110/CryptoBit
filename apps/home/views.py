@@ -19,10 +19,16 @@ def home(request):
     return render(request, 'pages/index.html', context)
 
 def subscribe(request):
-    subscribe_email = request.POST.get('subscribe-email')
+    subscribe_name = request.POST.get('subscribeName')
+    subscribe_name = request.POST.get('subscribeNumber')
+    subscribe_email = request.POST.get('subscribeEmail')
+    subscribe_name = request.POST.get('subscribeMessage')
 
     context = {
-        'subscribe_email' : subscribe_email
+        'subscribe_name' : subscribe_name,
+        'subscribe_number' : subscribe_number,
+        'subscribe_email' : subscribe_email,
+        'subscribe_message' : subscribe_message
     }
     
     email_template_html = render_to_string('emails/subscribe.html', context)
