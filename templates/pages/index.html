@@ -6,6 +6,9 @@
     {% block mainContent %}
 
     <main>
+    <div class="loader d-flex center items-centre fixed ">
+        <img src="{% static 'images/loader.gif' %}" alt="Loader" class="loader-img">
+    </div>
         <section class="home-banner section-padding hundred relative d-flex" id="home-section-1">
             <div id="share-bar"></div>
             <canvas id="stars" class="absolute"></canvas>
