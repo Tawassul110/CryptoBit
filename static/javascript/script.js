@@ -144,16 +144,38 @@ $(document).ready(function () {
     //SUBSCRIBE FORM VALIDATE
     $("#subscribe").validate({
         rules: {
-            email: {
+            subscribeName: {
+                required: true,
+            
+
+            },
+            subscribeNumber: {
+                required: true,
+                rangelength: [11,11]
+            },
+            subscribeEmail: {
                 required: true,
                 email: true
-
+            },
+            subscribeMessage: {
+                required: true
             }
         },
         messages: {
-            email: {
-                required: "Email is Required*",
-                email: "Please enter a valid email address*"
+            subscribeName: {
+                required: " *Required",
+                
+            },
+            subscribeNumber: {
+                required: " *Required",
+                rangelength: " *Please enter a valid phone number"
+            },
+            subscribeEmail: {
+                required: " *Required",
+                email: " *Please enter a valid email address"
+            },
+            subscribeMessage: {
+                required: "*Required"
             }
         }
 

@@ -100,10 +100,9 @@ html, body {
 .col-sm-3{
     width: 30%;
 }
-
-
-
-
+.capitalize{
+    text-transform: capitalize;
+}
 .margin-auto{
     margin: auto;
 }
@@ -893,7 +892,7 @@ button.slick-prev{
 
 /* section 7 */
 
-#home-section-7 input[type="email"]{
+.subscribe-form input{
     width: calc(70% - 170px);
     line-height: 50px;
     font-size: 16px;
@@ -904,20 +903,21 @@ button.slick-prev{
     border: transparent;
 }
 
-#home-section-7 .button{
-    left: 205px;
-    border: none;
+.subscribe-form textarea{
+    resize: none;
+    width: 500px;
+    height: 200px;
+    color: #8486a6;
+    padding: 10px 10px;
+    width: calc(70% - 170px);
+    line-height: 50px;
+    font-size: 16px;
+    outline: none;
+    color: #8486a6;
+    padding-left: 20px;
+    border-radius: 20px;
+    font-family: "Lato", sans-serif;
 }
-
-#subscribe label.error{
-    z-index: 1;
-    top: 60px;
-    position: absolute;
-    left: 260px;
-    margin: auto;
-    width: max-content;
-}
-
 /* MARKET */
 #market-section-1 h2{
     font-size: 60px;
@@ -1155,18 +1155,19 @@ a#ui-id-2:active{
 .buy-form{
     width: 50%;
 }
-/* label#userEmail-error{
+label#userEmail-error{
     color: red;
 }
 label#userAcccno-error {
     color: red;
 }
-label#fullName-error {
-    color: red;
-} */
-#ebuy-error{
+label#firstName-error {
     color: red;
 }
+label#lastName-error {
+    color: red;
+}
+
 
 
 /**
@@ -1234,7 +1235,7 @@ label#fullName-error {
     font-size: 20px;
 }
 .coin-specify-box{
-     margin-bottom: 40px;
+     margin: 20px 0 40px 0;
 }
 .coin-image {
     margin: 3px 13px 0 0;
