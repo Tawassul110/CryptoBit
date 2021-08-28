@@ -390,17 +390,14 @@ $(document).ready(function () {
 
     let foremail;
     let forpwd;
-    let foraccnum;
     $("#forgotForm").submit(function (event) {
         event.preventDefault();
         foremail = $("input[name=foremail]").val();
         forpwd = $("input[name=forpwd]").val();
-        foraccnum = $("input[name=foraccnum]").val();
-        console.log(foremail, foraccnum, forpwd);
+        console.log(foremail, forpwd);
         let registered_users = JSON.parse(localStorage.getItem('users'));
         for (let index = 0; index < registered_users.length; index++) {
-            if (registered_users[index]['email'] == foremail)
-                (registered_users[index]['account'] == foraccnum); {
+            if (registered_users[index]['email'] == foremail) {
                 registered_users[index]['password'] = forpwd;
                 localStorage.setItem('users', JSON.stringify(registered_users));
             }
